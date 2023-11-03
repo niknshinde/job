@@ -1,6 +1,4 @@
 import React from "react";
-import Notes from "./Notes";
-import AddNote from "./AddNote";
 import Jobs1 from "./Jobs1";
 import Section1 from "./Section1";
 import Section0 from "./Section0";
@@ -8,6 +6,7 @@ import Section0 from "./Section0";
 export const Home1 = () => {
   return (
     <div>
+      <h1 className="homeh1">Available jobs</h1>
       {/* <Notes/> */}
       <Section0 />
       <Section1/>

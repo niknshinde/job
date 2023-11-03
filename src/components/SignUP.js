@@ -16,7 +16,7 @@ const SignUP = (props) => {
       e.preventDefault();
       const{name,email,password} = credentials;
       try {
-          const response = await fetch('http://localhost:5000/api/auth/createemployee', {
+          const response = await fetch('https://job-portal-backend-f934.onrender.com/api/auth/createemployee', {
               method: "POST", // *GET, POST, PUT, DELETE, etc.
         
               headers: {

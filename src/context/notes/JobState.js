@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import JobContext from './jobContext';
 
 export const JobState = (props) => {
-  const host = 'http://localhost:5000';
+  const host = 'https://job-portal-backend-f934.onrender.com';
   const jobsInitial = [];
 
   const [jobs, setJobs] = useState(jobsInitial);
@@ -13,7 +13,7 @@ export const JobState = (props) => {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
-          'auth-token': localStorage.getItem('token'),
+          // 'auth-token': localStorage.getItem('token'),
         },
       });
       const json = await response.json();

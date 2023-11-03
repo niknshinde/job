@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 
 const JobDetail = () => {
   const { id } = useParams();
-  const host = 'http://localhost:5000';
+  const host = 'https://job-portal-backend-f934.onrender.com';
 
   const [job, setJob] = useState(null);
 
