@@ -75,10 +75,19 @@ a:hover{
 
 .card{
   padding: 30px;
-
+  box-shadow: 10px;
   width: 15rem;
   height: 20rem;
+  background-color: #fff; /* Set a white background for the card */
+  border: 1px solid #ddd; /* Add a subtle border around the card */
+  border-radius: 5px; /* Apply rounded corners to the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for elevation */
+  transition: transform 0.2s; /* Add a transition effect for smooth hover */
 
+}
+
+.card:hover{
+  transform: translateY(-5px); /* Apply a translateY transform on hover */
 
 }
 .card h1{
