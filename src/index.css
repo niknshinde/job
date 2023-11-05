@@ -68,16 +68,14 @@ a:hover{
 
 }
 
-.item{
 
-}
 
 
 .card{
   padding: 30px;
   box-shadow: 10px;
-  width: 15rem;
-  height: 20rem;
+  width: 20rem;
+  height: 18rem;
   background-color: #fff; /* Set a white background for the card */
   border: 1px solid #ddd; /* Add a subtle border around the card */
   border-radius: 5px; /* Apply rounded corners to the card */
@@ -98,5 +96,115 @@ a:hover{
   margin-bottom: 15px;
 }
 
+.section_2heading{
+  margin: 40px 0 30px 0;
+}
+
+.section2_flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+}
+
+.section2_item{
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 20px;
+  height: 10rem;
+  width: 20rem;
+  transition: transform 0.5s; /* Add a transition effect for smooth hover */
+
+}
+
+.section2_item:hover{
+  transform: translateY(-5px);
+  background-color: #ffc2cb;
+}
+
+.section2_logs_flex{
+  display: flex;
+
+}
+
+.section2_logs_flex h6{
+  margin-left: 10px;
+}
 
 
+
+.footer {
+  margin-top: 30px;
+  background-color: black;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap; /* Allow flex items to wrap on smaller screens */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo {
+  flex: 1; /* Occupy 100% of the available space on smaller screens */
+  text-align: center;
+  margin-bottom: 10px; /* Add some space between logo and info */
+}
+
+.footer-logo img {
+  width: 100px;
+  height: auto;
+}
+
+.footer-info, .footer-social {
+  flex: 1; /* Equal distribution of space between info and social on smaller screens */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.footer-info h3, .footer-social h3 {
+  font-size: 18px;
+}
+
+.footer-info p, .footer-social p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons a {
+  margin: 0 10px;
+}
+
+.social-icons img {
+  width: 70px;
+  height: auto;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column; /* Stack items on smaller screens */
+    align-items: center;
+  }
+
+  .footer-logo, .footer-info, .footer-social {
+    flex: 1; /* Equal distribution of space for all sections */
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+  }
+}
