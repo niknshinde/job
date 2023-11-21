@@ -3,10 +3,12 @@ import Jobs1 from "./Jobs1";
 import Section1 from "./Section1";
 import Section0 from "./Section0";
 import Section2 from "./Section2";
+import Search from "./Search";
 
 export const Home1 = () => {
   return (
     <div>
+      <Search/>
       <h1 className="homeh1">Available jobs</h1>
       {/* <Notes/> */}
       <Section0 />

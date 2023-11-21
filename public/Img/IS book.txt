@@ -1,0 +1,5089 @@
+1
+SUBJECT CODE : 310254(A)
+
+
+
+                                            As per Revised Syllabus of
+             Savitribai Phule Pune University
+
+                                    Choice Based Credit System (CBCS)
+
+                             T.E. (Computer) Semester - VI (Elective - II)
+
+
+                    Information Security
+
+
+
+
+                                                  Vilas S. Bagad
+                                                 M.E. (E&Tc), Microwaves
+                                              M.M.S. (Information systems)
+                              Faculty, Institute of Telecommunication Management,
+                                Ex-Faculty, Sinhgad College of Engineering, Pune
+
+
+                                                 Iresh A. Dhotre
+
+                                             M.E. (Information Technology)
+
+                                    Ex-Faculty, Sinhgad College of Engineering,
+
+                                                             Pune.
+
+
+                                                Dr. Swati Nikam
+
+                                             Ph.D. (Computer Engineering)
+
+                          M.E.(Computer Engineering), B.E.(Computer Engineering),
+
+                                                    Associate Professor,
+
+                                     Dr. D. Y. Patil Institute of Technlogy, Pimpri,
+
+                                                             Pune.
+
+
+
+
+                                              ®                                             ®
+                                                  TECHNICAL
+                                                   PUBLICATIONS
+                                   SINCE 1993 An Up-Thrust for Knowledge
+
+
+
+
+                                                               (i)
+
+2
+Information Security
+
+
+
+
+
+Subject Code : 310254(A)
+
+
+
+
+
+T.E. (Computer Engineering) Semester - VI (Elective - II)
+
+
+
+
+
+
+
+
+
+
+ Copyright with V. S. Bagad, I. A. Dhotre
+
+All publishing rights (printed and ebook version) reserved with Technical P ublications. No part of this book
+should be reproduced in any form, Electronic, Mechanical, Photocopy or any information storage and
+retrieval system without prior permission in writing, from Technical Publications, Pune.
+
+
+
+
+Published by :
+
+          ®                                 ® Amit Residency, Office No.1, 412, Shaniwar Peth,
+              TECHNICAL
+              PUBLICA                      Pune - 411030, M.S. INDIA, Ph.: +91-020-24495496/97
+                                 TIONS
+  SINCE 1993 An Up-Thrust for Knowledge Email : sales@technicalpublications.org Website : www.technicalpublications.org
+
+
+
+
+Printer :
+Yogiraj Printers & Binders
+Sr.No. 10/1A,
+Ghule Industrial Estate, Nanded Village Road,
+Tal. - Haveli, Dist. - Pune - 411041.
+
+
+
+
+
+
+
+
+    ISBN 978-93-5585-039-3
+
+
+
+
+
+
+
+
+  9789355 850393                                                                                                                                            SPPU 19
+
+
+    9789355850393 [1]                                                     (ii)
+
+3
+               
+
+               
+
+Preface 
+
+       The importance of Information Security  is well known in various engineering fields. 
+Overwhelming response to our books on various subjects inspired us to write this book. The 
+book is structured to cover the key aspects of the subject Information Security. 
+
+       The book uses plain, lucid language to explain fundamentals of this subject. The book 
+provides logical method of explaining various complicated concepts and stepwise methods 
+to explain the important topics. Each chapter is well supported with necessary illustrations, 
+practical examples and solved problems. All the chapters in the book are arranged in a 
+proper sequence that permits each topic to build upon earlier studies. All care has been 
+taken to make students comfortable in understanding the basic concepts of the subject. 
+
+       Representative questions have been added at the end of each section to help  the 
+students in picking important points from that section. 
+
+       The book not only covers the entire scope of the subject but explains the philosophy of 
+the subject. This makes the understanding of this subject more clear and makes it more 
+interesting. The book will be very useful not only to  the students but also to the subject 
+teachers. The students have to omit nothing and possibly have to cover nothing more. 
+
+       We wish to express our profound thanks to all those who helped in making this book a 
+reality. Much  needed  moral  support  and  encouragement is  provided on   numerous 
+occasions by our whole family. We wish to thank the  Publisher and the entire  team of 
+Technical Publications who have taken immense pain to get this book in time with quality 
+printing. 
+
+       Any suggestion for the  improvement of  the book  will  be acknowledged and well 
+appreciated. 
+                                                                                  
+                                                                                                                     Authors 
+                                                                                                                V.  S. Bagad 
+                                                                                                                 I.  A. Dhotre 
+                                                                                                            Dr. Swati  Nikam   
+                                                                   
+                                                                   
+           Dedicated to God. 
+
+
+                                                                  (iii) 
+
+4
+      
+      
+Syllabus 
+
+Information                  Security            -   310254(A) 
+
+                                   Credit :                         Examination  Scheme : 
+
+                                       03                            Mid-Sem (TH) : 30 Marks  
+                                                                       End-Sem (TH) : 70 Marks 
+
+ Unit I         Introduction   to Information  Security 
+ Foundations of Security, Computer Security Concepts, The OSI Security Architecture, Security attacks, 
+ Security services, Security mechanism, A Model for Network Security. (Chapter - 1) 
+
+ Unit II        Symmetric Key  Cryptography 
+ Classical Encryption Techniques : Stream Ciphers, Substitution Techniques : Caesar Cipher, Mono 
+ alphabetic Ciphers, Play fair Cipher, Hill Cipher, Poly alphabetic Ciphers, Transposition Techniques, Block 
+ Ciphers and Data Encryption standards, 3DES, Advanced Encryption standard. (Chapter - 2) 
+
+ Unit III       Asymmetric  Key Cryptography 
+ Number theory : Prime number, Fermat and Euler theorems, Testing for primality, Chinese reminder 
+ theorem, discrete logarithm, Public Key Cryptography and RSA, Key Management, Diffie-Hellman key 
+ exchange, El Gamal algorithm, Elliptic Curve Cryptography. (Chapter - 3) 
+
+ Unit IV      Data  Integrity  Algorithms  And  Web Security 
+ Cryptographic Hash Functions : Applications of Cryptographic Hash Functions, Two Simple Hash 
+ Functions, Requirements and Security, Hash Functions Based on Cipher Block Chaining, Secure Hash 
+ Algorithm (SHA), SHA-3, MD4, MD5.  Message Authentication Codes : Message Authentication 
+ Requirements, Message Authentication Functions, Requirements for Message Authentication Codes, 
+ Security of MACs.  Digital Signatures :  Digital Signatures, Schemes, Digital Signature standard, PKI 
+ X.509 Certificate. 
+ Web Security issues, HTTPS, SSH, Email security : PGP, S/MIME, IP Security : IPSec. (Chapter - 4) 
+
+ Unit V       Network  and System Security 
+ The OSI Security architecture, Access Control, Flooding attacks, DOS, Distributed DOS attacks Intrusion 
+ detection, Host based and network based Honeypot, Firewall and Intrusion prevention system, Need of 
+ firewall, Firewall characteristics and access policy, Types of Firewall, DMZ networks, Intrusion 
+ prevention system : Host based, Network based, Hybrid. 
+ Operating system Security, Application Security, Security maintenance, Multilevel Security, Multilevel 
+ Security for role based access control, Concepts of trusted system, Trusted computing. (Chapter - 5) 
+
+ Unit VI      Cyber  Security and Tools 
+ Introduction, Cybercrime and Information Security, Classification of Cybercrimes, The legal perspectives-
+ Indian perspective, Global perspective, Categories of Cybercrime, Social Engineering, Cyber stalking, 
+ Proxy servers and Anonymizers, Phishing, Password Cracking, Key-loggers and Spywares, The Indian IT 
+ Act-Challenges, Amendments, Challenges to Indian Law and Cybercrime Scenario in India, Indian IT Act. 
+ (Chapter - 6) 
+
+                                                                      (iv) 
+
+5
+Table                  of         Contents 
+                                                   
+
+                                              Unit I 
+
+Chapter - 1  Introduction to Information Security (1 - 1) to (1 - 22) 
+
+     1.1 Foundations of Security .................................................................................. 1 - 2 
+
+     1.2 Computer Security Concepts .......................................................................... 1 - 2 
+
+          1.2.1 Basic Terminologies in Security ....................................................................  1 - 3 
+
+          1.2.2 Categories .....................................................................................................  1 - 4 
+
+          1.2.3 Techniques ....................................................................................................  1 - 4 
+
+          1.2.4 Elements of Information Security .................................................................  1 - 5 
+
+          1.2.5 Threats and Vulnerability .............................................................................  1 - 7 
+
+     1.3 The OSI Security Architecture ......................................................................... 1 - 8 
+
+          1.3.1 Vulnerabilities in OSI Model .........................................................................  1 - 8 
+
+     1.4 Security Attacks ............................................................................................. 1 - 10 
+
+          1.4.1 Passive Attack .............................................................................................  1 - 11 
+
+          1.4.2 Active Attack ...............................................................................................  1 - 12 
+
+          1.4.3 Difference between Passive and Active Attack ..........................................  1 - 15 
+
+     1.5 Security Services ........................................................................................... 1 - 15 
+
+     1.6 Security Mechanism ...................................................................................... 1 - 17 
+
+          1.6.1 Security Policy .............................................................................................  1 - 18 
+
+     1.7 A Model for Network Security ...................................................................... 1 - 19 
+
+     1.8 Multiple Choice Questions with Answers ..................................................... 1 - 20 
+
+                                             Unit II 
+
+Chapter - 2  Symmetric Key Cryptography          (2 - 1) to (2 - 52) 
+
+     2.1 Introduction to Symmetric Key Cryptography ................................................ 2 - 2 
+
+          2.1.1   Advantages of Symmetric Key Cryptography ..............................................  2 - 3 
+
+          2.1.2   Disadvantages of Symmetric Key Cryptography ..........................................  2 - 4 
+
+                                                 (v) 
+
+6
+       2.2    Cryptography...................................................................................................     2 - 4 
+
+                2.2.1      Linear Cryptanalysis .....................................................................................  2 - 5 
+
+                2.2.2      Differential Cryptanalysis .............................................................................  2 - 6 
+
+                2.2.3      Difference between Linear and Difference Cryptanalysis ...........................  2 - 7  
+
+       2.3    Stream Ciphers ................................................................................................    2 - 7 
+
+                2.3.1      Advantages and Disadvantages of Stream Cipher .......................................  2 - 8 
+
+                2.3.2      Comparison between Stream and Block Cipher ..........................................  2 - 8 
+
+       2.4    Substitution  Techniques  .................................................................................    2 - 9 
+
+                2.4.1      Caesar Cipher  ..............................................................................................  2 - 9 
+
+                2.4.2      Monoalphabetic Cipher .............................................................................  2 - 10 
+
+                2.4.3      Playfair Cipher ............................................................................................  2 - 10 
+
+                2.4.4      Hill Cipher...................................................................................................  2 - 11 
+
+                2.4.5      Polyalphabetic Substitution .......................................................................  2 - 12 
+
+                2.4.6      One Time Pad .............................................................................................  2 - 14 
+
+                2.4.7      Feistel Cipher .............................................................................................  2 - 14 
+
+                2.4.8      Comparison between Monoalphabetic and Polyalphabetic Cipher ..........  2 - 17  
+
+       2.5    Transposition  Techniques .............................................................................    2 - 20 
+
+                2.5.1     Comparison of Substitution and Transposition Ciphers .............................  2 - 21 
+
+       2.6    Block Ciphers .................................................................................................    2 - 23 
+
+                2.6.1      Advantages and Disadvantage of Block Cipher .........................................  2 - 24 
+
+       2.7    Block Cipher Modes  of Operation  .................................................................   2 - 24 
+
+       2.8    Simple DES ....................................................................................................   2  - 29 
+
+       2.9    Data Encryption  Standard .............................................................................    2 - 33 
+
+                2.9.1      Details of Single Round ..............................................................................  2 - 35 
+
+                2.9.2      Key Generation ..........................................................................................  2 - 39 
+
+                2.9.3      DES Encryption ...........................................................................................  2 - 39 
+
+                2.9.4      DES Decryption ..........................................................................................  2 - 41 
+
+                2.9.5      DES Weak Keys ...........................................................................................  2 - 41 
+
+                2.9.6      Advantages of DES .....................................................................................  2 - 41 
+
+                2.9.7      Disadvantages of DES.................................................................................  2 - 42 
+
+
+                                                                         (vi) 
+
+7
+                2.9.8      Block Cipher Design Principles ...................................................................  2 - 42 
+
+                2.9.9      Double DES ................................................................................................  2 - 43 
+
+                2.9.10   Triple DES ....................................................................................................  2 - 44 
+
+       2.10 Confusion and   Diffusion ................................................................................    2 - 45 
+
+                2.10.1 Distinguish between Diffusion and Confusion ..............................................  2 - 46 
+
+       2.11  Advanced Encryption  Standard .....................................................................   2 - 46 
+
+                2.11.1 Evaluation Criteria for AES ............................................................................  2 - 46 
+
+                2.11.2 AES Cipher .....................................................................................................  2 - 47 
+
+                2.11.3 Comparison between AES and DES ...............................................................  2 - 49 
+
+       2.12  Multiple  Choice Questions  with  Answers .....................................................   2 - 50 
+
+                                                                   Unit    III 
+
+Chapter    - 3         Asymmetric       Key  Cryptography                              (3  - 1)   to  (3  -  56) 
+
+       3.1    Number  Theory ...............................................................................................    3 - 2 
+
+                3.1.1      Divisibility .....................................................................................................  3 - 2 
+
+                3.1.2      Prime Number..............................................................................................  3 - 2 
+
+                             3.1.2.1 Relatively Prime Numbers .............................................................................. 3 - 3 
+
+                3.1.3      Greatest Common Divisor ............................................................................  3 - 4 
+
+       3.2    Fermat and  Euler Theorems ...........................................................................    3 - 5 
+
+                3.2.1      Fermat’s and Euler’s Theorems ...................................................................  3 - 5 
+
+       3.3    Testing for  Primality ........................................................................................    3 - 7 
+
+       3.4    Chinese Reminder Theorem  ...........................................................................    3 - 8 
+
+       3.5    Euclid's Algorithm  .........................................................................................    3 - 11 
+
+                3.5.1      Extended Euclidean Algorithm...................................................................  3 - 12 
+
+       3.6    Discrete Logarithm  ........................................................................................    3 - 15 
+
+                3.6.1      Computing Discrete Logarithm ..................................................................  3 - 16 
+
+       3.7    Public Key Cryptography   ..............................................................................   3 - 17 
+
+                3.7.1      Advantages and Disadvantages .................................................................  3 - 20 
+
+                3.7.2      Comparison between Public Key and Private Key Algorithm ....................  3 - 20 
+
+       3.8    RSA ................................................................................................................   3  - 22 
+
+
+                                                                        (vii) 
+
+8
+                3.8.1      Attacks on RSA ...........................................................................................  3 - 23 
+
+                             3.8.1.1   Computing  (n) ....................................................................................... 3 - 23 
+
+                             3.8.1.2   Timing Attacks .......................................................................................... 3 - 24 
+
+                             3.8.1.3   Mathematical Attacks .............................................................................. 3 - 24 
+
+                             3.8.1.4   Adaptive Chosen Cipher-text Attacks ...................................................... 3 - 25 
+
+       3.9    Key Distribution .............................................................................................     3 - 32 
+
+                3.9.1      Distribution of Public Keys .........................................................................  3 - 32 
+
+                3.9.2      Distribution of Secret Keys using Public Key Cryptography .......................  3 - 35 
+
+                3.9.3      Key Distribution and Certification ..............................................................  3 - 37 
+
+                3.9.4      Key Distribution .........................................................................................  3 - 41 
+
+       3.10  Diffie-Hellman  Key Exchange ........................................................................   3 - 45 
+
+       3.11  El Gamal Algorithm  .......................................................................................    3 - 50 
+
+       3.12  Elliptic Curve Cryptography  ...........................................................................   3 - 52 
+
+       3.13  Multiple  Choice Questions  with  Answers .....................................................   3 - 54 
+
+                                                                   Unit     IV 
+
+Chapter    - 4         Data   Integrity      Algorithms      and   Web   Security 
+                                                                                                                   (4   - 1)  to   (4  - 60) 
+
+       4.1    Cryptographic Hash  Functions ........................................................................    4 - 2 
+
+                4.1.1     Requirement and Security ............................................................................  4 - 3 
+
+                4.1.2      Applications of Cryptographic Hash Functions ............................................  4 - 3 
+
+                4.1.3      Two Simple Hash Functions .........................................................................  4 - 4 
+
+                4.1.4      Birthday Attack ............................................................................................  4 - 5 
+
+       4.2    Hash Functions Based on Cipher  Block Chaining ............................................  4 - 6 
+
+       4.3    Secure Hash Algorithm  (SHA) ..........................................................................  4 - 7 
+
+                4.3.1     Secure Hash Algorithm (SHA-512) ................................................................  4 - 8 
+
+                4.3.2     SHA-3 ..........................................................................................................  4 - 13 
+
+       4.4    Message Digest .............................................................................................    4 - 15 
+
+                4.4.1     MD5 Description .........................................................................................  4 - 15 
+
+                4.4.2      Differences between MD4 and MD5 .........................................................  4 - 17 
+
+
+
+                                                                        (viii) 
+
+9
+                4.4.3      Comparison between MD5 and SHA .........................................................  4 - 17 
+
+       4.5    Message Authentication   Codes ....................................................................   4 - 18 
+
+                4.5.1      Message Authentication Requirements ....................................................  4 - 19 
+
+                4.5.2      Application of MAC ....................................................................................  4 - 19 
+
+                4.5.3      MAC based on DES .....................................................................................  4 - 20 
+
+       4.6    Digital Signatures  ..........................................................................................    4 - 21 
+
+                4.6.1      Arbitrated Digital Signatures .....................................................................  4 - 21 
+
+                4.6.2      Direct Digital Signature ..............................................................................  4 - 22 
+
+                4.6.3      Digital Signature Standard .........................................................................  4 - 23 
+
+                4.6.4      Digital Signature Algorithm ........................................................................  4 - 24 
+
+       4.7    PKI .................................................................................................................    4 - 25 
+
+                4.7.1     Benefits and Limitation of PKI ..................................................................... 4 - 27 
+
+                4.7.2 Certificate    .................................................................................................... 4 - 27 
+
+       4.8    X.509 Certificate ............................................................................................    4 - 29 
+
+                4.8.1      X.509 Format of Certificate ........................................................................  4 - 30 
+
+                4.8.2      Obtaining User’s Certificate .......................................................................  4 - 31 
+
+                4.8.3      Revocation of Certificates ..........................................................................  4 - 32 
+
+                4.8.4      Authentication Procedures ........................................................................  4 - 32 
+
+                4.8.5      Digital Certificate .......................................................................................  4 - 33 
+
+       4.9    Web Security  Issues ......................................................................................   4 - 35 
+
+                4.9.1      Transport Layer Security (TLS) ...................................................................  4 - 36 
+
+                4.9.2      Comparison between IPsec and TLS ..........................................................  4 - 38 
+
+       4.10  HTTPS ............................................................................................................   4 - 38 
+
+       4.11  SSH ................................................................................................................   4 -  40 
+
+       4.12  Email Security ................................................................................................    4 - 44 
+
+                4.12.1   IPv4 Header Format ....................................................................................  4 - 44 
+
+       4.13  IP Security......................................................................................................    4  - 47 
+
+                4.13.1   IP Security Architecture ..............................................................................  4 - 47 
+
+                4.13.2   IPSec Document ..........................................................................................  4 - 47 
+
+                4.13.3   IPSec Services ..............................................................................................  4 - 48 
+
+
+                                                                         (ix) 
+
+10
+                4.13.4   Security Association ....................................................................................  4 - 49 
+
+                4.13.5   SA Parameters ............................................................................................  4 - 50 
+
+                4.13.6   Transport Mode ..........................................................................................  4 - 50 
+
+                4.13.7 Tunnel Mode ...............................................................................................  4 - 51 
+
+                4.13.8   Application of IPSec ....................................................................................  4 - 52 
+
+                4.13.9   Benefits of IPSec .........................................................................................  4 - 52 
+
+       4.14  Authentication   Header ..................................................................................   4 - 52 
+
+                4.14.1   AH Transport Mode ....................................................................................  4 - 54 
+
+                4.14.2   AH Tunnel Mode .........................................................................................  4 - 54 
+
+       4.15 ESP ................................................................................................................. 4 -    55 
+
+                4.15.1   ESP Format ..................................................................................................  4 - 55 
+
+                4.15.2   Encryption and Authentication Algorithms ................................................  4 - 55 
+
+                4.15.3   Padding .......................................................................................................  4 - 56 
+
+                4.15.4   Comparison between AH and ESP ..............................................................  4 - 56 
+
+       4.16  Multiple  Choice Questions  with  Answers .....................................................   4 - 56 
+
+                                                                    Unit     V 
+
+Chapter    - 5         Network     and   System    Security                             (5  -  1)  to  (5   - 42) 
+
+       5.1    Access Control .................................................................................................    5 - 2 
+
+                5.1.1     Discretionary Access Control (DAC) ..............................................................  5 - 2 
+
+                             5.1.1.1 Drawbacks of DAC .......................................................................................... 5 - 2 
+
+                5.1.2     Mandatory Access Control (MAC) ................................................................  5 - 3 
+
+                             5.1.2.1 Elements of MAC ........................................................................................... 5 - 3 
+
+                             5.1.2.2 MAC Implementations ................................................................................... 5 - 3 
+
+                5.1.3     Role-Based Access Control (RBAC) ...............................................................  5 - 4 
+
+                             5.1.3.1 Difference between DAC and RBAC ............................................................... 5 - 5 
+
+                5.1.4     Access Control Matrix  ..................................................................................  5 - 5 
+
+                             5.1.4.1 ACLs and Capabilities Lists ............................................................................. 5 - 5 
+
+       5.2    Flooding Attacks ..............................................................................................    5 - 6 
+
+                5.2.1     Distributed DOS Attacks ...............................................................................  5 - 8 
+
+
+
+                                                                         (x) 
+
+11
+       5.3    Intrusion  Detection  .........................................................................................    5 - 9 
+
+                5.3.1     Prevention  .................................................................................................  5 - 10 
+
+                5.3.2     Detection ....................................................................................................  5 - 11 
+
+                5.3.3     Function and Strength of IDS ......................................................................  5 - 11 
+
+                5.3.4     Types of IDS ................................................................................................  5 - 12 
+
+                             5.3.4.1 Anomaly Detection ...................................................................................... 5 - 12 
+
+                             5.3.4.2 Signature-based Detection .......................................................................... 5 - 13 
+
+                             5.3.4.3 Comparison between Signature-based and Anomaly Detection ................. 5 - 13 
+
+                             5.3.4.4 Network based System ................................................................................ 5 - 13 
+
+                             5.3.4.5 Host-based IDSs (HIDS) ................................................................................ 5 - 14 
+
+                             5.3.4.6 Differences between HIDS and NIDS............................................................ 5 - 15 
+
+                5.3.5     Limitation of IDS .........................................................................................  5 - 16 
+
+                5.3.6     Difference between IDS and IPS .................................................................  5 - 16 
+
+                5.3.7     Intrusion Detection Techniques .................................................................  5 - 17 
+
+                5.3.8     Tools for Intrusion Detection ......................................................................  5 - 17 
+
+                5.3.9     Distributed IDS ............................................................................................  5 - 18 
+
+       5.4    Honeypot.......................................................................................................     5  - 19 
+
+       5.5    Firewall ..........................................................................................................    5  - 19 
+
+                5.5.1     Types of Firewall .........................................................................................  5 - 22 
+
+                             5.5.1.1 Packet Filtering Router ................................................................................. 5 - 22 
+
+                             5.5.1.2 Application Level Gateways ......................................................................... 5 - 26 
+
+                             5.5.1.3 Circuit Level Gateways ................................................................................. 5 - 27 
+
+                             5.5.1.4 Comparison between Packet Filter and Proxies........................................... 5 - 27 
+
+                5.5.2     Firewall Location .........................................................................................  5 - 28 
+
+                5.5.3     Firewall Configuration ................................................................................  5 - 30 
+
+       5.6    Intrusion  Prevention  System .........................................................................   5 - 32 
+
+       5.7    Operating  System Security ............................................................................   5 - 33 
+
+                5.7.1     Application Security ....................................................................................  5 - 34 
+
+                5.7.2     Security Maintenance .................................................................................  5 - 35 
+
+       5.8    Multilevel  Security  ........................................................................................    5 - 35 
+
+
+                                                                         (xi) 
+
+12
+       5.9    Concepts of Trusted  System .........................................................................   5  - 36 
+
+       5.10  Trusted Computing  .......................................................................................    5 - 37 
+
+                5.10.1   Software Reverse Engineering ....................................................................  5 - 38 
+
+                5.10.2   Digital Rights Management ........................................................................  5 - 39 
+
+       5.11  Multiple  Choice Questions  with  Answers .....................................................   5 - 40 
+
+                                                                   Unit     VI 
+
+Chapter    - 6         Cyber    Security    and   Tools                                     (6  -  1)  to  (6  -  40) 
+
+       6.1    Introduction   ....................................................................................................    6 - 2 
+
+                6.1.1     Cybersqatting ................................................................................................  6 - 3 
+
+                6.1.2     Cyber Terrorism ............................................................................................  6 - 4 
+
+                6.1.3     Cybercrime against Property ........................................................................  6 - 5 
+
+       6.2    Cybercrime and  Information   Security .............................................................   6 - 7 
+
+                6.2.1     Types of Cyber Crimes ..................................................................................  6 - 8 
+
+                6.2.2     Information Security Life Cycles ...................................................................  6 - 9 
+
+                6.2.3     Botnets ........................................................................................................  6 - 10 
+
+                6.2.4     Zombie ........................................................................................................  6 - 12 
+
+       6.3    Classification of  Cybercrimes ........................................................................   6  - 13 
+
+       6.4    The Legal Perspectives - Indian  Perspective .................................................   6 - 16 
+
+                6.4.1     Indian IT Act ................................................................................................  6 - 17 
+
+                6.4.2     Cyber Laws and Crimes as per the Indian IT Act .........................................  6 - 19 
+
+                6.4.3     Advantages of Cyber Law ...........................................................................  6 - 19 
+
+                6.4.4     A Global Perspective on Cybercrimes  ........................................................  6 - 20 
+
+       6.5    Categories of Cybercrime ..............................................................................    6 - 21 
+
+       6.6    Social Engineering .........................................................................................    6 - 21 
+
+       6.7    Cyber Stalking................................................................................................    6 - 23 
+
+                6.7.1     Motivates of Cyber Stalker .........................................................................  6 - 25 
+
+                6.7.2     Types of Stalkers .........................................................................................  6 - 25 
+
+                6.7.3     Typology of Cyber Stalking .........................................................................  6 - 27 
+
+                6.7.4     Types of Stalkers .........................................................................................  6 - 27 
+
+
+                                                                        (xii) 
+
+13
+                6.7.5     Investigating Cyber Stalking ........................................................................  6 - 28 
+
+       6.8    Proxy Servers  ................................................................................................   6 - 29 
+
+       6.9    Anonymizers..................................................................................................     6 - 30 
+
+       6.10  Phishing .........................................................................................................    6 - 30 
+
+                6.10.1   Phishing Attacks ..........................................................................................  6 - 32 
+
+                6.10.2   Buffer Overflow ..........................................................................................  6 - 33 
+
+                             6.10.2.1 Exploitation ................................................................................................ 6 - 35 
+
+       6.11  Password Cracking ........................................................................................    6 - 35 
+
+       6.12  Keyloggers and Spywares ..............................................................................   6 - 36 
+
+       6.13  The Indian IT Act - Amendments...................................................................     6 - 36 
+
+       6.14  Challenges to Indian  Law and Cybercrime  Scenario in India  ........................ 6 - 37 
+
+       6.15  IT Act .............................................................................................................    6 -  37 
+
+                6.15.1   Aim and Objectives of IT Act, 2000  ............................................................  6 - 37 
+
+                6.15.2   Importance of IT Act ...................................................................................  6 - 38 
+
+       6.16  Multiple  Chioce Questions  with  Answers .....................................................   6 - 39 
+
+Solved    Model    Question     Papers                                                         (M  -  1)  to  (M   - 4)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                        (xiii) 
+
+14
+                                                   Notes 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+                                                      (xiv) 
+
+15
+TECHNICAL PUBLICATIONS TM- An up thrust for knowledge
+
+19
+                Confidentiality
+
+
+
+
+
+                      Secure
+Integrity                          Availability
+
+25
+                            Opponent                      Read content of
+                                                            message from sender
+                                                                      to receiver
+
+
+                                              nternet
+
+
+     Sender                                                                              Receiver
+
+
+
+
+
+
+
+
+
+                                                    hp
+
+
+
+
+
+
+                               Opponent                  Observe pattern of
+                                                             messages from sender
+                                                                        to receiver
+     hp                                                                                                 hp
+
+
+                                                 nternet
+
+
+Sender
+                                                                                                  Receiver
+
+26
+                                             hp
+
+
+
+
+
+
+                  Opponent                      Message from opponent
+                                                        that appears to be from sender
+
+        hp                                                                                               hp
+
+
+                                      nternet
+
+
+Sender                                                                                      Receiver
+
+27
+                                                                hp
+
+
+
+
+
+
+
+                                                                                    Capture message from
+                                   Opponent                                 sender to receiver, later
+                                                                                    replay message to receiver
+
+     hp                                                                                                                                 hp
+
+
+
+                                                           nternet
+
+
+Sender                                                                                                                       Receiver
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                           hp
+
+
+
+
+
+
+                                                                                    Opponent modifies
+                             Opponent                                       message from sender
+                                                                                    to receiver
+
+               hp                                                                                                              hp
+
+
+
+                                                     nternet
+
+
+           Sender                                                                                                   Receiver
+
+28
+                                      hp
+
+
+
+
+
+
+                                                  Disrupts service
+                                                  provided by server
+
+
+hp                                                                                            hp
+
+
+
+                              nternet
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                           Source                                                            Server
+                                           system
+                                                 hp                                                                           Target
+                                                                                                                               system
+
+
+
+                                                            Legitimate connection attempt
+                                                                       TCP SYN packet
+
+                                                                   TCP SYN ACK packet
+
+                                                                       TCP ACK packet
+
+
+                                                                   Syn flood DOS attack
+                                                                       TCP SYN packet
+
+
+                                                                   TCP SYN ACK packet
+
+                                                    The final TCP ACK packet is never sent
+
+34
+                                                                             Trusted third
+                                                                                   party
+
+
+
+
+
+
+ Sender                                                                                                                                                       Receiver
+
+
+                 Transformation                                                                                           Transformation
+
+Message              +                   Secret                   nformation                 Secret                    +                  Message
+                                                message Channel                                  message
+
+
+
+
+
+                        Secret                                            Opponent                                             Secret
+                    information                                                                                                  information
+
+37
+TECHNICAL PUBLICATIONS TM- An up thrust for knowledge
+
+38
+                                                                          Secret key
+                                                                           shared by
+                                                                 sender and recipients
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Plaintext                            Encryption                                             Decryption                                Plaintext
+   input                                algorithm                                               algorithm                                    output
+
+39
+                                                                                                 ^
+                                                                                                 X
+                                                            Cryptanalyst                 ^
+                                                                                                K
+
+
+
+Message           X          Encryption Y                            Decryption X
+                                       algorithm                                  algorithm                      Destination
+  source
+
+
+
+                                                  K Secure channel
+
+
+
+                                            Key
+                                         source
+
+42
+       PP12 1 2 CC
+
+               
+
+
+
+
+
+                              2 38
+
+                                247
+
+43
+       Key stream
+
+
+
+
+                                                        Ciphertext
+
+
+
+
+
+  Plaintext
+
+Pay 150/-
+
+44
+                                                  , , 12KKK3....... i K
+
+                                                                  , , 12PPP3....... i P
+
+
+Ci        iPKi
+
+
+Pi        iCKi
+
+46
+
+
+47
+
+ C1   1211KKK13 P1 
+                                                               
+ C2   2221KKK23 P2 
+            
+ C3   3231KKK33   P3 
+                                                                      
+
+
+
+
+
+
+
+
+           
+
+
+
+
+
+
+                        17 17 5 
+                                                  
+                        21 18 21 
+                        2219 
+
+48
+  17 17 5   15 
+                              
+  21 18 21   0 
+ 221924
+
+ 375                            11 
+                                   
+ 819                            13 
+                                   
+ 486                            18 
+
+51
+                                  Plaintext (2w bits)
+                                                                                                                                     Key
+
+
+
+Round 1 L0 w bits                             w bits R0 K1                                                    Subkey
+                                                                                                                               generation
+                                                                                                                                algorithm
+                                                F
+
+
+
+
+
+
+               L1                                                            R1
+
+
+
+
+Round i                                                                                Ki
+
+
+
+                                                F
+
+
+
+
+
+
+               Li                                                             Ri
+
+
+
+
+Round n                                                                               Kn
+
+
+
+                                                F
+
+
+
+
+
+
+               Ln                                                            Rn
+
+
+
+
+             Ln+1                                                          Rn+1
+
+
+                                  Plaintext (2w bits)
+
+52
+                        LD0 F (,RD K 016)
+
+
+
+
+
+53
+                                                                                                                                                                                  RE0 LE0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                          ki                                                                                 ki
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        17 17 5 
+                                  
+        21 18 21 
+        2219 
+
+                                     17 17 5 
+                                                               
+                                     21 18 21 
+                                     2219 
+
+
+
+
+
+ 15   15   375                                        11 
+                                                             
+ 0   0   819                                            13 
+                                                             
+ 24   24   486                                        18 
+
+54
+ 2 
+ 
+ 14 
+ 
+ 4 
+
+
+
+
+
+
+01314
+                          
+ 19 6 4 
+ 17125 
+
+
+
+
+
+
+
+                              01314 2 
+                            
+ 19 6 4   14  mod26
+                           17125 4 
+                               
+
+ 238                              4 
+                                     
+ 138  mod 26  8 
+                                     
+ 148                              18 
+
+55
+01314
+19 6 4 
+                     
+17125
+
+ 448
+ 18 13 0 
+                      
+  18 19 11
+
+          KPmod26
+
+                        01314448
+19 6 4  18 13 0  mod26
+                                          
+                           1712518 19 11
+
+486 435 154
+256 230 196 mod26
+                            
+ 536 556 411
+
+18 19 24
+22 22 14  mod26
+                     
+ 16 10 21
+
+STY
+WWDmod26
+                       
+QKV
+
+57
+
+
+
+
+
+
+58
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                         
+
+                         
+
+                         
+
+
+
+
+
+                         
+
+                         
+
+                         
+
+59
+227
+ 16
+
+60
+EK
+
+Co K( o Em I)
+Ci  (     ) KiEmCi1
+
+61
+      Time = 1   Time = 2                 Time = N
+         P1           P2                           PN
+
+K               K                             K
+      Encrypt     Encrypt                    Encrypt
+
+        C1             C2         Encryption CN
+
+        C1             C2                           CN
+
+K                                              K K
+      Decrypt     Decrypt                   Decrypt
+
+        P1             P2         Decryption PN
+
+62
+                Ci         k i E(P C i1)
+                 Pi           Ci1 ( k i DC)
+
+
+
+
+
+
+
+
+
+
+
+
+
+      P0           P1            P2                            C0           C1           C2
+
+
+IV +                +              +
+
+                                                                Key D             D             DDecryption
+                                                Encryption                                              box
+Key E             E             Ebox
+
+                                                                IV +                +              +Exclusive
+
+                                                                                                                    OR
+
+      C0           C1           C2                            P0            P1           P2
+
+                 Encryption                                               Decryption
+
+63
+           Plaintext
+                                 Ciphertext
+
+          Shift register  Shift register
+
+                         K
+Key     Encrypt           Decrypt
+
+
+              Ki               Select discard
+
+P1          +                    +
+
+           Ciphertext       Plaintext
+
+64
+          Counter       Counter 1
+
+Key    Encrypt Key Encrypt
+
+P1        +     P2        +
+
+            C1               C2
+               (a) Encryption
+          Counter       Counter 1
+
+Key    Encrypt Key Encrypt
+
+C1        +     C2        +
+
+            P1                P2
+               (b) Decryption
+
+65
+                      12bbbbbbbb345678
+                      345612kkkkkkkkkk78910
+
+
+                                         K1 K2
+           K1             S1
+
+           K2             S2 S1
+
+                    LS1 LS2
+
+
+345612kkkkkkkkkk78910                    74 352kkkkkkkkkk101986
+
+66
+     LS1
+
+
+
+     LS2
+
+
+
+
+
+
+
+                                                                                                                                           K1 K2
+
+
+                         IP 1 fK2 fK1
+
+
+
+
+
+
+
+
+
+     IP 1
+
+
+
+
+
+
+
+
+
+
+              fK
+
+
+
+fK                               FK
+
+FK
+
+67
+         12bbbb34               14bb,bb23
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                       LR00            L0
+       R0                                                  ith
+i1LRi1                     LRii                       Ki
+
+
+                                                 Li–1                      Ri–1
+
+
+
+                                                                               f          Ki
+
+
+
+
+
+
+                                                  Li                          Ri
+
+68
+                             ith
+          Li             Ri1 R              iiL 1f(R i,K 1)i
+
+
+LRnn
+
+                                  RLnn
+
+
+
+
+                                                  K,K12 Kn
+Kn Kn1 K1
+
+               f(R  i1,Ki )                       f(R  i1,K i)
+
+
+                                                       Ri–1
+
+
+
+                                                     E(R i–1)
+
+
+                                                                    Ki
+
+
+
+                                              4 bits       4 bits
+
+
+                                                S1           S2
+
+
+                                                    f(R i–1, K)i
+
+                                                                     f(R i1,k)i
+
+
+
+
+
+                                  1        2       3        4        5        6
+
+
+                        1       2        4        3        4        3        5       6
+
+                                                                               E(R  i1)
+                                                                                                                     Ki
+
+69
+                                     f(R  i1,K i)
+
+
+                      6th
+
+(     ) fR i1,Ki
+
+70
+Plain text (64 bit)                                                                                   Key (64 bit)
+
+
+
+
+
+ nitial permutation                                                                                   Permuted
+                                                                                                                choice 1
+
+                  64                                                                                                    56
+
+                                       48                                                 56
+                                                           Permuted                                   Left circular
+        Round 1                                      choice 2                                           shift
+                                      K1
+                  64                                                                                                    56
+
+                                       48                                                 56
+        Round 2                                     Permuted                                   Left circular
+                                                            choice 2                                          shift
+                                      K2
+
+
+
+
+
+
+
+
+
+
+
+                                       48                                                 56
+                                                           Permuted                                   Left circular
+      Round 16                                      choice 2                                           shift
+                                     K16
+
+
+
+
+     32 bit swap
+
+
+                  64
+
+
+    Inverse initial
+     permutation
+
+
+
+
+Ciphertext (64 bit)
+
+72
+32 bits                                    32 bits                                 28 bits                      28 bits
+
+
+ Li–1                                        Ri–1                                    Ci–1                          Di–1
+
+
+
+
+
+                                                                                         Left shift                   Left shift
+                                           Expansion /
+                                          permutation
+
+
+
+                               F                     48
+
+
+
+                                                XOR                         Ki                  Permutation /
+                                                                                                       contraction
+                                                                48
+
+
+
+
+
+                                    Substitution / choice
+                                              (S-box)
+
+
+                                                      32
+
+
+                                          Permutation
+                                                 (P)
+
+                                                      32
+
+
+
+
+                                                XOR
+
+
+
+
+
+   Li                                            Ri                                        Ci                                 Di
+
+73
+                R (32 bits)
+
+
+
+
+                       E
+
+
+
+
+                   48 bits                                                                                   K(48 bits)
+
+
+
+                                                                       +
+
+
+
+
+
+
+
+S1               S2                S3                S4                S5                S6                S7               S8
+
+
+
+
+
+
+
+                                                                       P
+
+
+
+
+                                                                   32 bits
+
+75
+b1               b2 b3 b4 b5                                    b6
+
+
+
+
+
+
+                            4 bit column
+                                number
+
+
+                               2 bit row
+                                number
+
+76
+ L  R                                                
+ R              ()Lf(R,K)                      
+                                                             
+
+
+
+                                                                                              L0 R0
+
+
+       Ln1 Rn1                            Kn                     n
+
+Ln Rn1
+
+Rn Ln1 Rn1 Kn
+
+                                     16RL16
+
+
+
+                                       Key
+
+
+
+                                   Permuted
+                                    choice 1
+
+
+
+
+                  C0                                       D0
+
+
+
+                 Left                                      Left
+                 shift                                     shift
+
+
+                  C1                                       D1
+                                                                                Permuted         K
+                                                                                 choice 2            1
+
+                 Left                                      Left
+                shifts                                   shifts
+
+
+                  CN                                      DN
+                                                                                Permuted         K
+                                                                                 choice 2            N
+
+                 Left                                      Left
+                shifts                                   shifts
+
+
+                 C16                                     D16
+                                                                                Permuted        K
+                                                                                 choice 2            16
+
+77
+                                                         Kn
+
+
+      Kn
+Kn
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                              10RL10                                          K10
+                                  K10
+
+79
+              K2 K E(E(P))1
+
+
+
+
+              K1 K D(D(C))2
+
+
+
+
+
+                   K2 K E(E(P))1
+
+
+
+
+
+
+
+
+
+  Encryption                                                                            Decryption
+
+
+
+    64-bit                                                                                     64-bit
+plaintext (P)                                                                          plaintext (P)
+
+
+
+                                                        K1
+                                                                                               DES reverse
+  DES cipher
+                                                                                                    cipher
+
+
+
+
+ 64-bit middle                                                                         64-bit middle
+        text                                                                                        text
+
+
+
+                                                        K2                                  DES reverse
+  DES cipher
+                                                                                                    cipher
+
+
+
+
+   64-bit cipher                                                                          64-bit cipher
+       text (C)                                                                                 text (C)
+
+80
+                           K1                                                                 (K2)
+                                       K3
+
+
+
+
+
+
+
+
+C= EK3 [DK2 [E K1 [P]]]
+
+
+
+     Plaintext
+
+
+
+DES Encryption                Key 1
+
+
+
+DES Encryption                Key 2
+
+
+
+DES Encryption                Key 3
+
+
+
+    Ciphertext
+
+84
+             Plaintext                                                                                         Plaintext
+                                                           Key
+
+
+         Add round key                         w[0, 3]                                           Add round key
+
+
+                                                                                                                                                  10
+
+        Substitute bytes                      Expand key                                   nverse sub bytes Round
+
+
+1          Shift rows                                                                                  nverse shift rows
+
+
+
+Round
+          Mix columns                                                                              nverse mix columns
+
+
+         Add round key                                w[4, 7]                                    Add round key            9
+
+
+
+                                                                                                                                                  Round
+                                                                                                              nverse sub bytes
+
+
+                                                                                                              nverse shift rows
+
+        Substitute bytes
+
+
+
+9          Shift rows
+
+
+
+Round
+          Mix columns                                                                              nverse mix columns
+
+
+         Add round key                              w[36, 39]                                  Add round key
+
+
+        Substitute bytes                                                                            nverse sub bytes         1
+
+
+10                                                                                                                                              Round
+
+
+Round  Shift rows                                                                                  nverse shift rows
+
+
+         Add round key                              w[40, 43]                                  Add round key
+
+
+            Ciphertext                                                                                      Ciphertext
+        (a) Encryption                                                                                (b) Decryption
+
+89
+TECHNICAL PUBLICATIONS TM- An up thrust for knowledge
+
+90
+                                 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+91
+                       a p11 a p22 a p33 ........pta t
+
+              p 12p .... pt
+
+
+
+
+                      pap                          
+                        p
+                     PE
+
+
+
+
+
+               1ijn
+
+
+gcd (15, 27  )3
+
+
+gcd (15, 17  )1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                        2521
+
+           22                       211         2 212
+
+           51              514          1 511
+
+92
+          97
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1081.1  322
+
+322.3  115
+
+115.2  92
+
+92.1  23
+
+23.4  0
+
+
+
+
+
+
+
+
+
+
+20 2 10
+
+10 2 0
+
+93
+                             20 52
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a p–1 
+
+
+
+ap 
+
+
+
+
+
+
+
+
+
+                                                                                                                                       
+
+94
+          a (n) 
+
+                                                                              (n)
+                                                                           (n)
+
+
+
+                                12{x,x,x n) (}
+
+
+
+                                                            (n)
+
+
+
+(n)              (n)
+ (ax imod n)  xi
+  i1                i1
+
+        (n)      (n)
+         axi   xi (mod ) n
+           i1       i1
+
+        (n)  (n)
+a (n)     xx   ) n
+              i  i(mod
+          i1  i1
+
+        a (n)1 
+
+
+
+
+
+
+                  
+
+95
+              
+
+
+
+
+
+
+                                                                                                              
+
+
+
+
+
+
+
+
+
+                                            
+
+                                             
+
+
+
+
+
+                                             
+
+                                            
+
+
+
+
+
+
+
+                                                                                                       a2
+
+
+                                                          a2
+
+
+
+
+
+                                                                                                                                 2k
+
+
+
+aq                                                                          aq                                                        aq  1
+
+
+
+                                                                           a2K1q
+                                                                                                            
+      a2j1q                                                                                          a2j1q
+
+96
+                            Z 10
+
+        m1 m 2m 3... mk i m's
+gcd (m ij,m ) 1ijk
+
+    (a 12,a ,...a ) k Z, miaZmi ai mi 1ik
+                                            ZM
+   m2m1ZZ ...mkZ
+                                   
+  (a 12,a ,...a ) k  ai mi
+                      (a 12,a ,...a ) k         ZM
+                         (a 12,a ,...a ) k
+                   (a 12,a ,...a ) k
+          i   i MMm   Mi m1 m 2... mi1 ... mk
+             Mi     mj       
+                   
+          i i icM(Mmodm) 1
+                            i      
+             (a 11 a 2c2 c...ac)kk
+     ai        mi     j j cM0(modm)i i  i c1(modm)
+                                     ZM
+
+
+         A 12(a,a,...a)kB 12(b,b,...b)k
+            ((a               11b ) mod m1 , ... (a kbk ) mod m ) k
+            ((a               11b ) mod m1 , ... (a k bk ) mod m ) k
+         ((a               11b ) mod m1 , ... (a k bk ) mod m ) k
+
+97
+                                                  
+
+
+                                                                                                            
+         nt  1 (mod m)                                                                    
+         x           bms b (mod n)
+
+                       x1                                              1 xx(modm)  1 xx(modn) x1
+
+
+
+
+
+
+
+
+
+
+
+                                                                                  x1                                              xx1
+                                                                     1 xx(modmn)
+
+
+                                                     
+
+                    x80                                                    715                
+80  5 (mod 15)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                 
+                          
+
+98
+                   
+
+
+                                                   
+
+
+
+
+                                                                                                               
+
+
+                                                                                    n1 n2 n3
+             f –1                         x1 x2 x3
+
+             N1        2  3 nn
+
+            N2         1  3 nn
+
+            N3         1  2 nn
+
+             v 1  (N 1)–1 42–1 2–1 3 (mod 5)
+
+             v 2  (N 2)–1 35–1 5–1 5 (mod 6)
+
+             v 3  (N 3)–1 30–1 2–1 4 (mod 7)
+
+                    1 1 1 avN 2 2 2 avN a133 N 3
+                   
+
+                   
+
+                   
+
+
+
+
+
+
+
+
+
+                                                                                
+n1          n2            n 3
+  12nnn3  
+
+c1           c2           c3
+
+             N1 Nn1
+
+99
+         N1                                    35 1
+
+         N2 Nn2                                                  21 1
+
+         N3 Nn3                                                  15 1
+
+                                                          
+
+
+                
+
+
+                                 
+
+                                 
+
+                                 
+
+
+
+
+
+
+
+
+
+
+
+
+              ca cb
+
+                                                                          dc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  3 ab0.
+
+100
+            1     1 qb r,
+          qr21 r2
+          qr32 r3,
+  
+  
+          i1i2qrr,i2
+  
+  
+
+
+
+
+1* 87  38
+2* 38 11
+3*11 5
+2*5 1
+5*1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      qbr,11
+qr21 2 r,
+qr32 3 r,
+  
+
+101
+  
+
+      i i2qr1 i r2,
+  
+qrkk–1 k r,
+
+    k1qrk
+
+
+ k –2r–qrkk–1
+
+   2 k–r–qrkk–1
+
+
+
+
+
+   2 k 3 k– 1 k–k–r–qr–q 2 k–r
+   k k 1qq–1 k–r 2 –qrkk–3
+
+102
+   a1          b1                              a2         b2
+
+
+    2r0                                                2r4
+
+
+
+     a1              1  b50
+
+     a1 bq 11r1
+     a2              2  b10bq 22r2
+    2r0                                              2  r10
+
+
+
+
+
+                 
+                 
+                 
+                 
+
+103
+ a (n) 
+      (n)
+
+
+
+    am 
+
+
+                                         (n)
+
+
+     71
+
+     72                              
+
+     7 3                               
+
+     74                                   
+
+     75                                       
+
+
+                              7m 
+
+
+
+                xlogx(y)
+
+
+log x (1)
+log x (x)
+log x(yz) log x               x (y) +log (z)
+
+     x log(y)r  rlog(y)x
+
+
+
+
+
+                       
+                                                            
+
+104
+                   ai                                         
+
+
+                                                     dloga, p (b)
+
+    dlog a, p (1)                     a0
+
+    dlog a, p (a)                    a1
+
+
+
+
+                                                               x  (modn)
+
+                               x  log   (modn)
+
+
+
+
+
+
+
+
+
+
+
+                                     Zp
+
+
+
+
+Zp
+
+Zp k                    k  p1
+
+
+
+
+
+                                                                      
+                                                    
+                      x  (modn)               x  log   (mod n)
+
+           x  
+
+105
+    alog
+
+106
+                   Suresh                                  Tomy
+
+
+
+                                                    Alice
+
+
+                                                  Alice                                              Alice
+                                                  public                                            private
+                                                  key                                                key
+
+
+
+
+                                                                   Transmitted
+                                                                    ciphertext
+
+
+
+Plaintext                         Encryption                                       Decryption                            Plaintext
+  input                              algorithm                                         algorithm                               output
+
+
+                                                                   (a) Encryption
+
+
+
+
+
+
+
+
+
+                                                                                                                Bob
+
+
+                                                                                                             Bob's
+                                                     Bob's                                               public
+                                                     private key                                      key
+
+
+
+
+                                                                       Transmitted
+                                                                        ciphertext
+
+
+
+    Plaintext                         Encryption                                       Decryption                            Plaintext
+       input                             algorithm                                         algorithm                               output
+
+
+                                                                (b) Authentication
+
+107
+                                                                           <
+                                                                         X
+                                             Cryptanalyst          <
+                                                                         KRb
+
+
+                                               Y
+Message    X        Encrypt                         Decrypt      X
+                                                                                              Destination
+ source
+
+
+
+
+                                                  KVb KRb
+
+    Source side X                                                  Destination side Y
+                      1                           Key-pair                                    1
+                                                    source
+
+
+
+                                                                      12X(X,X,X)m
+                                                                                                             KUb
+                         KRb
+                                                                       Y1
+                     KUb              X1
+                  Y 12,Y ,Y 3.... Y n
+
+                         b KUE(X)
+
+
+
+                         b KRD(Y)
+                                                                                      KUb
+                                KRb
+
+108
+                                                                                 (PU b)
+PRb
+
+                                                                                     (PU b)
+
+109
+                   pq 
+
+
+
+
+
+                         
+
+
+
+
+
+              Me                    27
+
+              Cd                    128 343
+
+110
+                                                                                                               npq
+
+
+
+
+
+                                                                              
+                                  
+                        (n)
+
+                                             (n)                        (n)
+
+                                            de (n)
+                (n)
+
+                                     KU
+
+                                       KR
+
+
+                                                                       Pe
+
+
+                                                                    Cd
+
+
+
+
+                                                                 pq                                                       (n)
+
+
+
+          (n)
+                                                                                              (n)
+
+
+
+xy
+
+111
+   de  (n)                              ped  P
+
+
+                 CPe
+                 PCd           (P ) ed           Ped
+
+
+
+                                                                                       (n)
+               (n)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+            (n)                                                            (n)
+
+
+
+
+
+  (n)
+
+112
+  2             p(n(n)1)pn
+
+
+                                          (n)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      (n)                                                                                                                            e 1
+
+      (n)
+
+                           (n)
+
+                                                                                                (n)
+
+
+                                                                              (n)
+
+113
+                                                                                                       ()n
+
+
+
+                    
+
+                19 23
+
+
+
+ (n)                      
+
+ (n) 18 22
+
+ (n)
+
+                             (n)
+
+
+
+                1
+                3
+
+
+
+
+
+
+
+
+
+
+                    
+
+                   
+
+ (n)
+
+114
+  (n)         
+
+      ed                (n)
+
+      7d
+
+
+                Me
+
+               127
+
+
+
+                             
+
+  (n)                                      610
+
+      ed                (n) 
+
+
+
+                Me
+
+                2517               
+
+
+
+
+
+                cd
+
+               12 3
+
+                957
+
+
+
+
+
+
+
+
+
+                  
+
+                     
+
+  (n)
+
+                                                   
+
+      ed               (n)
+
+
+
+
+
+115
+                               cd
+
+                              1123
+
+
+
+
+
+
+
+
+
+                                               pq 11 5
+
+                                 (n) (p 1) (q 1) 10 4
+
+
+
+
+                    gcd( ( ne), ( )
+
+                                         e1(mod  )) (n
+
+                 de1(mod (n))
+
+
+
+
+
+
+
+
+                                            Me
+
+                                            93
+
+                                            cd
+
+                                            14 27
+
+116
+                      
+
+                      
+
+
+
+ (n)
+
+
+
+                      
+
+
+
+
+
+
+
+
+                                  (n)
+
+
+
+
+
+
+                        
+
+                      
+
+                      
+
+                      
+
+
+
+
+
+
+                                                        
+
+                                                                        
+
+                                                             
+
+                                       
+
+
+
+
+                  e–1
+
+                  e–1
+
+117
+                   Me
+
+                  (8) 17
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                         
+
+
+
+
+
+
+                               
+
+                                    
+
+                                   (n)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                       
+
+                               
+
+                                    
+
+
+
+
+                   Me                          (40) 23
+
+118
+                                
+
+
+
+()n                                                       
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                             ()n
+
+
+
+                                 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                              
+
+119
+                     Me
+
+                     313
+
+
+
+
+
+
+
+
+                                   
+
+                    (P 1) (Q 1)     1 2 17()()71
+
+
+
+
+
+2222213
+
+
+          ed
+
+          5d
+
+120
+   PUa     PUb
+A PUa    PUb B
+    PUa    PUb
+   PUa      PUb
+
+121
+      Public key
+      directory
+
+  PUa  PUb
+A            B
+
+122
+                                                     Public key
+                                                      authority
+         1                                       ])                                                      4
+Request || Time1                  ime 1             E(PR                     Request || Time2
+
+
+
+                                  Request || T                  auth ,
+                                                                            [PU
+                                                                               a ||
+                                 ||
+                                                                              5 Request
+
+                            [PU b 2
+                          ,                                                                 ||
+
+                  E(PR auth                                                           T
+                                                                                              ime
+                                                                                                 2 ])
+                                                 3 E(PU bA, [ ID || N ])1
+    Initiator                                                                                       Responder
+        A                                                                                                   B
+
+                                                  6 E(PU a1, [N ||N ])2
+
+
+
+
+
+
+                                                    7 E(PU a2,N )
+
+123
+                                      Certificate
+                                       authority
+
+
+                                 PU ])        C
+                                   a             B
+                               ||                   =
+    PUa                  DA                   E(PR                PUb
+                           || I
+
+                       ime 1                         auth ,
+
+                     [T                                     [T
+
+                    ,                                          ime
+
+
+             E(PR auth                                    2 ||
+                                                                    ID
+                                                                      B ||
+            =                        1 CA                           PU
+         CA                                                             b ])
+
+A                                                                                   B
+
+                                      2 CB
+
+
+
+
+                           || ||
+
+124
+                                                1 PU || ID aA
+
+
+  User                                                                                            User
+    A                                                                                                  B
+
+                                                2 E(PU a,K)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        1 E(PU b1,[N || ID ])A
+
+
+
+                                        2 E(PU a1,[N ||N ])2
+
+
+Initiator                                                                                      Responder
+    A                                                                                                  B
+                                        3 E(PU a2,N )
+
+                                        4 E(PU ba, E(PR ,K ))s
+
+127
+                                        Root CA
+
+
+
+
+
+   Asia CA                      Europe CA                      USA CA
+
+Subordinate                  Subordinate                  Subordinate
+       CA                                 CA                                CA
+
+
+
+
+
+                                       Marketing                    Engineering
+  Sales CA                            CA                                CA
+
+Subordinate                  Subordinate
+       CA                                 CA                         Subordinate
+                                                                                  CA
+
+                                                                                                   Certificate
+                                                                                                   issued by
+                                                                                                   Engineering CA
+
+129
+   31026
+
+130
+Data                                                                                                        Cryptographic protection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Session keys                                                                                           Cryptographic protection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Master keys                                                                                         Non-cryptographic protection
+
+131
+                                                     KDC
+
+
+
+             D| II|D| |N1
+
+               AB
+          1
+
+                         2 E(Ka , [K sAB|| IID || D ||N 1])||E(Kb , [Ks , ID ])A
+
+
+
+                                              3 E(K bs, [K || ID ])A
+
+
+
+A                                                                                                            B
+
+                                              4 E(K s2,N )
+
+
+                                              5 E(K s2, f(N ))
+
+132
+                        KDC
+
+
+ HOST                                     HOST
+
+Application                            Application
+                    2      3
+   1
+
+Security                                  Security
+ service                                   service
+
+                                4
+                        Network
+
+
+
+
+
+
+
+
+
+
+
+
+
+               1 ID ||N A1
+
+
+  A                                              B
+               2 E(MKm , [K sAB|| IID || D ||f(N 1)||(N )])2
+
+
+                3 E(K s2, f(N ))
+
+133
+                                                              gk
+
+
+
+g ab                                                               ga                       gb
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    ga                                                          gb
+
+134
+                       g ab  ()b g a
+
+           g ba  ()a g b
+
+      abggba
+
+
+                                             
+
+
+
+                                                                       XA
+
+                                                                      XB
+
+
+
+                                    (Y B)XB
+
+                                   (Y A)XB
+
+
+     (Y B)XA
+
+     ( XB mod q XA q mod
+
+     ( XB XA modqXBXA modq
+
+     ( XA mod q XB q mod
+
+     (Y A)XB
+
+
+
+
+
+
+            
+
+
+
+
+                     XA
+
+                    (3) 97
+
+                    (1.9080 1097 )
+
+135
+ XB
+
+ 3 ()233
+
+(1.4765 10 111)
+
+
+
+(Y B)XA                248()97
+
+(1.8273 10232 )
+
+(Y A)XB                40()233
+
+(1.9053 10 373 )
+
+
+
+                                         
+
+
+
+
+
+
+
+
+
+
+ XA                   7 ()5
+
+
+
+
+
+ XB                 7 ()12
+
+
+
+
+
+(YB XA
+
+ 4 ()5
+
+136
+                                                                                             gx
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                        Zp *
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+21
+
+22
+
+23
+
+24
+
+25
+
+26
+
+27
+
+28
+
+29
+
+137
+    26
+
+                  XA
+
+                   YB 11()6
+
+                   YB
+
+
+
+                                  YB XA
+
+                                 36
+
+
+
+
+
+                            
+
+
+
+
+
+
+                                  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                           
+
+
+
+
+
+ XA
+
+138
+   2XA
+
+    2X8
+
+
+
+
+
+
+
+
+                          gx             2 modn5 mod11
+
+
+                          gy             3 modn5 mod11
+
+
+                K1 Bx                  2 modn4 mod11
+
+                K1
+
+                K2 Ay                   3 modn3 mod11
+
+                K2
+
+139
+                                           ga
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     c1 gk                        2  cmbk
+
+         (c 12, c )
+
+
+
+
+
+                2 cc1a
+
+
+
+ 2 cc1a mb kk(g ) amb k(ga ) k(g ) ka
+
+               mgak g ak
+
+
+
+
+
+                                                               M1         M2
+
+
+                                                                                                           M1
+                                                           M2
+
+
+
+
+              72
+
+140
+             c1                                      c2
+
+73                                       53
+
+73                                       53
+
+73                                       53
+
+73                                       53
+
+141
+         (2 n)                                                                       
+
+
+
+
+
+                                                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                nA
+
+PA nA                                                        q E(a,b)
+
+                                                 nB                                            PB
+                                                      nPAB
+                                                     nPBA
+
+142
+     nPAB A   B n(nG)
+
+              BAn(nG)
+
+                   nPBA
+
+
+
+
+   APnGA
+
+
+
+              {KG, Pm  KP B}
+
+143
+                                            
+
+
+
+
+
+145
+TECHNICAL PUBLICATIONS TM- An up thrust for knowledge
+
+147
+                                                                                                                           h1
+
+
+
+                                                                                                                h1
+
+
+hn1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                    
+
+148
+Ci i2i1bb imb
+
+
+Ci ith                                        
+
+
+bij ith               jth
+
+ 
+
+150
+                                                                   M,M, 12,MN
+
+Ho
+Hi E(M i,H  i1)
+    HN
+
+
+
+
+
+
+                                         K E(x)
+                                                                   P 12;P ;:::; PN
+
+
+              PN1 PP12 PN
+
+                     C 12;C ;::;  CN1
+
+
+   Cj           E(K,[Cj1 Pj ])
+
+
+       P1 IV  D(K, C 1)
+       Pi       Ci1 D(K,C)i
+    PN1  N       N CD(K,C)1
+    PN1
+    PN1 PP12 PN
+              [IV          D(K, C 1)] [C 1D(K, C2 )]  [Y 1 CD(K, C )]N
+
+151
+264
+
+152
+269                                                                                             280
+
+154
+                          N  1024 bits
+
+                        L bits
+                                               128 bits
+              Message               100.0 L
+
+
+          1024 bits 1024 bits   1024 bits
+
+            M1    M2                   MN
+
+           1024    1024               1024
+
+V = 512      H1      H2
+          F   +                                 + F + N H=F
+Ho                                                    hash
+                                                        code
+
+155
+         hch(e,g) 1 512,feWKtt
+ 512
+   0 a Maj(a,b,c)
+
+156
+  Mi
+                          Hi–1
+
+Message
+schedule abcdefgh
+    W0                                      K
+                       Round 0            0
+
+
+
+            abcdefgh
+
+     Wt                                      Kt
+                       Round t
+
+
+
+            abcdefgh
+
+    W79                                    K79
+                       Round 79
+
+
+
+
+             + + + + + + + +
+
+
+
+                         Hi
+
+157
+a           b           c            d           e            f            g           h
+
+
+
+            maj                                               ch                      +
+                                                        
+
+                                                                                             +
+
+  +
+
+                                                                                             +              wt
+
+
+  +                                +                                                       +              kt
+
+
+
+
+
+
+
+
+
+a           b           c            d           e            f            g           h
+
+
+                                        512 bits
+
+158
+                                                              Buffer #1
+        Input                                                                                                                                                                         Output
+message
+
+
+
+                          AXI-ST                        Buffer #2                                           Padding       Keccak-f AXI-ST data
+
+
+
+
+                                                              Buffer #n
+
+
+
+                                                                                              Control
+
+159
+264
+
+161
+     6421
+
+162
+Pi D(Ki , C)                                                    Ki               Pi
+
+164
+          Time = 1       Time = 2               Time = N–1       Time = N
+            D1                  D
+           64 bits              2                          DN–1                DN
+
+
+                                   +                            ++
+
+
+  K       DES               DES              K                      K DES DES
+56 bits encrypt         encrypt                  encrypt             encrypt
+
+
+            O1                 O
+           64 bits              2                          ON–1                ON
+
+                                                                                        DAC
+
+
+
+
+              12D,D,D,3 ,DN
+
+
+           O1 E(K, D 1)
+           O2 E(K,[D2 O ])1
+           O3 E(K,[D 3  2 O ])
+
+
+
+          ON E(K,[DN   ON ])1
+                                                          ON
+                      
+
+166
+                                 ||                   M                   H
+M                                                                                           PU
+                         PRa                       s                                          G PUa
+
+
+                   PUG                            r
+
+                                                                                                    Ver
+
+        H             E Sig                                                                               Compare
+
+
+
+               K
+
+168
+                              II                M              H
+M
+
+                                                                        Compare
+
+              HE E[PR a, H(m)]                       D
+
+
+
+                      PRa                                   PUa
+
+169
+                                     pqg
+
+
+
+
+                                             f2                               r
+
+
+                                                                      x         q
+K
+
+
+                                                                           f1                     S
+        M
+                       H
+
+                                          (a) Signing
+
+
+                                                                yqg
+
+            M'                H
+
+                                  q                                f4
+            S'                f3
+                                                                                     V
+
+             r'                                                                  Compare
+
+                                              (b) Verifying
+
+172
+                                       Root CA
+
+
+
+
+
+   Asia CA                     Europe CA                      USA CA
+
+Subordinate                 Subordinate                 Subordinate
+       CA                                CA                                CA
+
+
+
+
+
+                                      Marketing                    Engineering
+  Sales CA                           CA                                CA
+
+Subordinate                 Subordinate
+       CA                                CA                        Subordinate
+                                                                                 CA
+
+                                                                                                 Certificate
+                                                                                                 issued by
+                                                                                                 Engineering CA
+
+174
+               Unsigned certificate                           Hash code
+                                                                          generation
+
+                         User ID,
+                   User's public key                    H
+
+
+
+
+                                                                                                               Encryption of hash code
+                                                                                                     E with certifying authority's
+                                                                                                               private key to form signature
+                    Verify signature
+  Signed           with CA's
+certificate        public key
+
+176
+                                                  Signature algorithm identifier
+
+
+                                                              Issuer name
+
+
+                                                             Latest update
+
+
+                                                              Next update
+
+                                                        User certificate serial
+
+                                                         Revoked certificate
+
+                                                           Revocation date
+
+
+
+
+                                                                Signature
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                           1
+
+
+
+
+User                                            User
+  A                                                 B
+
+177
+                              1
+
+
+
+User                                                  User
+  A                          2                            B
+
+
+
+
+
+
+
+
+
+
+
+                              1
+
+
+
+
+User                                                  User
+  A                          2                            B
+
+
+
+                              3
+
+180
+                                                      HTTP       FTP SMTP                   S/M IME PGP           SET
+
+HTTP       FTP SMTP                                    SSL                                        SMTP             HTTP
+
+                TCP                                               TCP                        UDP                  TCP
+
+               IPSec                                                IP                                                 IP
+
+         Network level                                Transport level                              Application level
+
+181
+HTTP
+
+
+
+
+ TLS
+
+
+
+
+ TCP
+
+
+
+
+   IP
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                  Server
+
+         Cli ent
+
+           hp
+
+
+
+
+
+
+
+
+
+                                            Hello
+
+
+                                        Certificate
+
+
+                                        Secret key
+
+
+                                  End handshaking
+
+
+                                  End handshaking
+
+183
+                    Client machine                                               Web server
+                          browser
+
+
+
+
+
+    TCP connect
+
+
+
+
+
+    SSL connect
+
+
+
+   Secure HTTP
+
+
+Get transaction
+
+185
+SSH User authentication protocol             SSH Connection protocol
+
+
+                                 SSH Transport layer protocol
+
+
+                           Transmission control protocol (TCP)
+
+
+                                            Internet protocol
+
+186
+SSH client                 1. Client initiates the connection by contacting server                SSH server
+
+        hp
+                                                           2. Sends server public key
+
+
+                                       3. Negotiate parameters and open secure channel
+
+
+                                           4. User login to server host operating system
+
+187
+    Packet length (4)
+
+  Padding length (1)
+
+
+
+
+           Payload
+(may be compressed)
+
+
+
+
+
+    Random padding
+
+
+              MAC
+
+
+
+           Encryption
+
+           Compression
+
+192
+                                          Architecture
+
+
+
+
+
+
+  ESP                                                                                    AH
+protocol                                                                             protocol
+
+
+
+
+
+    Encryption                                                      Authentication
+     algorithm                                                            algorithm
+
+
+
+
+                                           Domain of
+                                         interpretation
+
+
+
+
+                                                Key
+                                         management
+
+197
+0                           8                          16                                        31
+
+     Next header Payload length                       Reserved
+
+
+                         Security Parameter ndex (SP
+
+
+                                    Sequence number
+
+
+
+                                   Authentication data
+
+198
+           P                  TCP                 Original data
+       header              header
+
+                        (a) Before applying AH
+
+
+
+
+
+           P                AH                TCP                 Original data
+       header                                 header
+
+                          (b) After applying AH
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     P               TCP                 Original data
+ header           header
+
+                   (a) Before applying AH
+
+
+
+
+
+New P        AH          Original P          TCP           Original data
+header                            header            header
+
+                    (b) After applying AH
+
+199
+0                        8                      16                     24               31
+
+                            Security (SP I) parameter
+
+
+                                 Sequence number
+
+
+                                     Payload data
+
+                                                     Padding               Next
+  Padding (0-255 bytes)                  length              header
+                                Authentication data
+                                    (Variable size)
+
+205
+TECHNICAL PUBLICATIONS TM- An up thrust for knowledge
+
+211
+                                                                                  Server
+Source
+system
+     hp                                                                                           Target
+                                                                                                   system
+
+
+
+
+                     Legitimate connection attempt
+
+                                TCP SYN packet
+
+
+                            TCP SYN ACK packet
+
+
+                                TCP ACK packet
+
+
+                            Syn flood DOS attack
+
+                                TCP SYN packet
+
+
+                            TCP SYN ACK packet
+
+             The final TCP ACK packet is never sent
+
+212
+                                                                   2
+ Attack
+machine                                                      SYN                                                                   SYN
+
+hp                                                             packets                                                              packets
+
+                                                                                                      Internet
+                        1
+                                                                                                                                          SYN/ACK
+                                                                                                                                            packets Target web
+                                                                                                                                                 3             server
+
+
+                                       Slave
+                                      servers
+
+222
+         LAN monitor
+                                      Host            Host
+
+                                                                            Agent
+                                                                           module
+
+
+
+
+
+Router
+
+
+
+
+
+                                   WAN                               Router
+
+
+
+
+
+
+
+                                  Manager
+                                    module
+     Central manager                            Host            Host
+                                                                                               LAN monitor
+
+224
+          hp                                                                    hp
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                     To Internet
+
+
+
+hp                                     hp                                     hp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                         Firewall
+
+
+                                                     Corporate network
+
+225
+
+
+226
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+227
+                                             Packet
+                                             filtering
+Internet                                  router                             Private
+                                                                                    network
+
+
+
+                                                                 Protected zone
+
+230
+                                              Application level gateway
+        hp                                                                                                                hp
+
+                                                            TELNET
+                                Outside                                                Inside
+                             connection                  FTP                 connection
+
+                                                              SMTP
+                                                                                                                    Inside host
+Outside host                                          HTTP
+
+231
+                                               P Application gateway P
+
+        hp                               packet                                              packet                         hp
+
+                                                                        HTTP
+                                                                        SMTP
+                                                                          FTP
+                                                                      TELNET
+
+Inside host                                                                                                          Outside host
+
+232
+Internet
+
+
+
+                                            Outer                                                                 Inner
+                                           firewall                                                               firewall                                     hp
+
+
+           Untrusted                                                       DMZ
+                                                                           semi-trusted                                                               Trusted
+               zone
+                                                                                  zone                                                                      zone
+
+234
+                                                                                                               Bastion
+                                                                                                                  host
+
+                                                                                                                      hp                                                       hp
+
+
+
+
+
+
+
+
+
+nternet
+
+                                  Packet
+                                  filtering
+                                   router                                                                                                  hp                                                hp
+
+
+
+
+
+
+                                                                                                                                                                    Private
+                                                                           Information                                                                      network
+                                                                                 server                                                                          hosts
+
+235
+                                                                                                                    Bastion
+                                                                                                                       host
+                                                                                                                           hp                                                   hp
+
+
+
+
+
+
+
+
+                       nternet
+
+                                                      Packet
+                                                     filtering
+                                                       router                                                                                     hp                                         hp
+
+
+
+
+
+                                                                                                                                                                       Private
+                                                                                         Information                                                           network
+                                                                                              server                                                                hosts
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                              Bastion
+                                                                                                 host
+                                                                                                     hp
+
+
+
+
+
+
+
+
+nternet                                                                                                                                                                                                    Private
+                                                                                                                                                                                                                 network
+
+                             Outside                                                                                                                                 nside
+                               router                                                                                                                                   router
+
+
+
+
+
+
+                                                                Information
+                                                                     server
+
+
+                                                                                                                                         Modem
+
+237
+                                                                             IDS
+
+                                   Alert
+
+
+
+
+
+                                                                                                                Attack
+                                                                                                                packet
+
+
+
+
+Internal
+network
+
+                                                                                                    Border router
+                                            IPS                                                                                                           Internet
+                                                              Attack
+                                                              packet
+
+240
+0                           8                          16                                        31
+
+     Next header Payload length                       Reserved
+
+
+                         Security Parameter ndex (SP
+
+
+                                    Sequence number
+
+
+
+                                   Authentication data
+
+242
+                                           Forward engineering
+
+
+
+                          Architecture                             Code / Test
+
+Requirements                               Design                              Implementation
+
+
+                        Requirements                               Design
+                            recovery                                  recovery
+
+
+                                           Reverse engineering
+
+244
+     Content                                                       Content                                                   Content
+       owner                                                     distribution                                                   usage
+
+
+
+     Media                        Right                         Right                          Fee                        Usage
+    content                  assignment               transaction                 collection                 monitoring
+identification
+
+
+   Media ID #               View                          Uses                         Royalty                     Ensure performance
+   Format                     Print                          Duration                    Commission             Revenue assurance
+   Description               Listen                       Limitations                License
+
+247
+TECHNICAL PUBLICATIONS TM- An up thrust for knowledge
+
+256
+                                                                               1. Planning
+      7. Policy creation
+
+
+
+
+                                                                                                     2. Policy
+6. Rist analysis                                                                       implementation
+                                                   Security
+                                                        life
+                                                      cycle
+
+
+
+          5. Security                                                                    3. Monitor
+         assessment
+
+
+
+
+                                               4. Intrusion
+                                                 detection
+
+257
+                          Typical                                                         Botnet
+
+
+
+
+                                         Command & Control
+
+
+
+
+
+hp            hp           hp             hp              hp            hp            hp            hp            hp
+
+
+
+         unsuspecting web user's zombie computers
+
+277
+                                               Attacker
+                                                      hp
+
+
+ABC_bank.com
+
+
+                                                E-mail               ABC_bank.com
+                                                                        172 168 254 254
+
+
+                                         ABC_bank.com
+  172 168 1 1 
+                                     www.ABC_bank.com
+
+
+
+              hp
+
+
+
+
+         Client
+
+                                      (a) Phishing
+
+
+                                                 Attacker
+                                                        hp
+
+
+  ABC_bank.com
+
+
+
+
+
+
+
+
+     172 168 1 1  isonin g
+
+
+                                    po                               ABC_bank.com
+                                                                      172 168 254 254
+                               DNS
+
+                 hp            No rma lo nline bankin g
+
+
+
+
+
+
+
+
+
+           Client
+                                      (b) Pharming
+
+287
+T.E. (Computer) Semester - VI (Elective - II) (As Per 2019 Pattern)
+
+288
+            T.E. (Computer) Semester - VI (Elective - II) (As Per 2019 Pattern)
+
+
+21
+  2
+
+291
+9789355 850393
+
+     Made in India
+
+292
+                               TEXT BOOKS FOR T.E. (COMP) SEM VI
+
+
+
+  Compulsory Subjects
+
+
+  1. Web Technology (A. A. Puntambekar)
+
+  2. Data Science and Big Data Analytics (I. A. Dhotre, Dr. Kalpana V. Metre)
+
+  3. Artificial Intelligence (Anamitra Deshmukh-Nimbalkar, Dr. Vaishali P. Vikhe)
+
+  Elective Subjects
+
+  4. Information Security (V. S. Bagad, I. A. Dhotre, Dr. Swati Nikam)
+
+  5. Augmented and Virtual Reality (Dr. Ninad More, Sunita Patil)
+
+  6. Cloud Computing (I. A. Dhotre)
+
+  7. Software Modeling and Architecture (A. A. Puntambekar)
+
+
+
+
+
+
+
+
+
+                                                                                                    ®
+
+FE                                                          DECODE
+
+
+SE                                          A Guide for Engineering Students
+
+TE                                               PAPER SOLUTIONS
+
+BE                            Covers Entire Syllabus Question Answer Format Exact Answers & Solutions
+                                                Important Points to Remember Important Formulae
+ For All                         Chapterwise Solved University Questions Last 10 Years Solved Papers
+Branches
+                                                    ... Available at all Leading Booksellers ...
+

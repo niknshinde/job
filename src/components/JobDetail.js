@@ -45,7 +45,7 @@ const JobDetail = () => {
           <strong>Location: {job.location}</strong>
           {/* Display other job details as needed */}
           <br />
-          <button>Apply</button>
+          <button className='nav-btn'>Apply</button>
         </>
       ) : (
         <p>Loading data...</p>
