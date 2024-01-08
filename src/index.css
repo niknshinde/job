@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #E2DE84;
+  background-color: #FDF7E4;
 }
 
 code {
@@ -55,6 +55,16 @@ a:hover{
 
 .outerContainer{
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap:10px;
+}
+
+
+.post-job-outercontainer{
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
@@ -77,10 +87,10 @@ a:hover{
   box-shadow: 10px;
   width: 20rem;
   height: 18rem;
-  background-color: #ECFEAA; /* Set a white background for the card */
+  background-color: #DED0B6; /* Set a white background for the card */
   border: 2px solid black; /* Add a subtle border around the card */
   border-radius: 5px; /* Apply rounded corners to the card */
-  box-shadow: 0 4px 8px #F6FFD7; /* Add a shadow for elevation */
+  box-shadow: 0 4px 8px #2d2e2a; /* Add a shadow for elevation */
   transition: transform 0.2s; /* Add a transition effect for smooth hover */
 
 }
@@ -226,13 +236,12 @@ a:hover{
   border: 2px solid black;
 }
 
-input[type="text"],
+/* input[type="text"],
 input[type="email"],
 input[type="password"] {
-  /* background-color: rgb(222, 235, 239); */
   background-color: #D8D8C0;
   border: 2px solid black;
-}
+} */
 
 .search_btn {
   padding: 0.7rem;
@@ -268,3 +277,14 @@ input[type="password"] {
 
 }
 
+
+
+
+
+.min_height{
+  min-height: 70vh;
+}
+
+
+
+/* Apply the background color to all input, textarea, and select elements within the forms */

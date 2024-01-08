@@ -17,7 +17,7 @@ const Login = (props) => {
     const handelSubmit = async(e)=>{
         e.preventDefault();
         try {
-            const response = await fetch('https://job-portal-backend-f934.onrender.com/api/auth/login', {
+            const response = await fetch('https://job-portal-backend-z21e.onrender.com/api/auth/login', {
                 method: "POST", // *GET, POST, PUT, DELETE, etc.
           
                 headers: {
@@ -52,7 +52,7 @@ const Login = (props) => {
     
     }
   return (
-    <div className="container my-5">
+    <div className="container my-5 min_height">
       <h2>Log in</h2>
       <p>Don’t have an account? <Link to = '/signup'>Join here</Link> </p>
     <form onSubmit={handelSubmit}>

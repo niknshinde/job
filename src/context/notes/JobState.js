@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import JobContext from './jobContext';
 
 export const JobState = (props) => {
-  const host = 'https://job-portal-backend-f934.onrender.com';
+  const host = 'https://job-portal-backend-z21e.onrender.com';
   const jobsInitial = [];
 
   const [jobs, setJobs] = useState(jobsInitial);

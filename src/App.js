@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 import { Home1 } from './components/Home1';
@@ -16,6 +16,7 @@ import { JobState } from './context/notes/JobState';
 import JobDetail from './components/JobDetail';
 import DashBoard from './components/DashBoard';
 import Footer from './components/Footer';
+import ApplyJobForm from './components/ApplyJobForm';
 
 
 
@@ -52,6 +53,9 @@ function App() {
           <Route path="/signup" element={<SignUP showAlert={showAlert}/>} />
           <Route path="/createemployer" element={<EmployerSignUp showAlert={showAlert}/>} />
           <Route path="/jobs/:id" element={<JobDetail />} />
+          <Route path="/ApplyJobForm/:id" element={<ApplyJobForm />} />
+
+
 
 
         </Routes>

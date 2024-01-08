@@ -23,7 +23,7 @@ const EmployerSignUp = (props) => {
     e.preventDefault();
     const { name, email,companyName, industry, companyDescription, companyLocation,password } = credentials;
     try {
-      const response = await fetch('https://job-portal-backend-f934.onrender.com/api/auth/createemployer', {
+      const response = await fetch('https://job-portal-backend-z21e.onrender.com/api/auth/createemployer', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

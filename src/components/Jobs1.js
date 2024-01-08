@@ -166,9 +166,8 @@ const Jobs1 = () => {
           </div>
         </div>
       </div>
-
-      <div className="row my-3">
-        <h2>Posted Job's</h2>
+      <h2>Posted Job's</h2>
+      <div className="post-job-outercontainer">
         {jobs.map((job) => {
           return <JobItem key={job._id} updateJob={updateJob} job={job} />;
         })}

@@ -1,15 +1,17 @@
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
-import React , { useEffect, useState } from 'react';
-
-import { useParams } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 
 const JobDetail = () => {
   const { id } = useParams();
-  const host = 'https://job-portal-backend-f934.onrender.com';
+  const host = "https://job-portal-backend-z21e.onrender.com";
 
   const [job, setJob] = useState(null);
 
-  let isEmployer = localStorage.getItem('token') && localStorage.getItem('userRole') === 'employer';
+  let isEmployer =
+    localStorage.getItem("token") &&
+    localStorage.getItem("userRole") === "employer";
 
   useEffect(() => {
     const fetchJobDetails = async (id) => {
@@ -21,6 +23,7 @@ const JobDetail = () => {
           },
         });
         const json = await response.json();
+        console.log(json);
         setJob(json);
       } catch (error) {
         console.error("Error fetching job details:", error);
@@ -29,26 +32,31 @@ const JobDetail = () => {
     };
 
     fetchJobDetails(id);
-  },[]);
+  }, []);
 
   return (
-    <div className="job-details">
+    <div className="job-details min_height">
       {job ? (
         <>
           <h1>{job.title}</h1>
-          
           <h3>about {job.employer.companyName} </h3>
           <p>{job.employer.companyDescription}</p>
-
           <h3>about Job</h3>
           <p>{job.description}</p>
           <strong>Location: {job.location}</strong>
           {/* Display other job details as needed */}
           <br />
-          <button className='nav-btn'>Apply</button>
+          
+
+          <Link to={`/ApplyJobForm/${job._id}`} state={{ jobId: job._id, employerId: job.employer._id }}>
+          <button className="nav-btn">Apply</button>
+          </Link>
+          
         </>
       ) : (
-        <p>Loading data...</p>
+        <div>
+          <p>Loading data...</p>
+        </div>
       )}
     </div>
   );

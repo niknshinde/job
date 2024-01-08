@@ -16,7 +16,7 @@ const SignUP = (props) => {
       e.preventDefault();
       const{name,email,password} = credentials;
       try {
-          const response = await fetch('https://job-portal-backend-f934.onrender.com/api/auth/createemployee', {
+          const response = await fetch('https://job-portal-backend-z21e.onrender.com/api/auth/createemployee', {
               method: "POST", // *GET, POST, PUT, DELETE, etc.
         
               headers: {
@@ -48,7 +48,7 @@ const SignUP = (props) => {
 
 
   return (
-    <div className="container my-5">
+    <div className="container my-5 min_height">
       <h2> Employee Sign up for TalentSphere</h2>
       <p>Create a free account or <Link to = "/login">log in</Link></p>
 
